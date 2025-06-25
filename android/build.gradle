@@ -1,11 +1,14 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library' version '7.4.2' apply true
+}
 
 android {
-    compileSdkVersion 30
+    compileSdk 34
+    namespace 'com.azure.reactnative.notificationhub'
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdk 16
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         ndk {
@@ -30,5 +33,6 @@ dependencies {
 
 repositories {
     mavenCentral()
+    google()
 }
 
