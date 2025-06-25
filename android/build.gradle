@@ -1,6 +1,5 @@
-plugins {
-    id 'com.android.library' version '7.4.2' apply true
-}
+apply plugin: 'com.android.library'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdk 34
@@ -26,13 +25,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.google.firebase:firebase-messaging:17.6.0'
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.google.android.gms:play-services-base:18.2.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.microsoft.azure:notification-hubs-android-sdk:0.6@aar'
 }
 
 repositories {
     mavenCentral()
-    google()
 }
 
