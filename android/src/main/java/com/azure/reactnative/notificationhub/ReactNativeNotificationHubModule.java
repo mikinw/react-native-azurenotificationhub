@@ -37,6 +37,12 @@ public class ReactNativeNotificationHubModule extends ReactContextBaseJavaModule
 
     private ReactApplicationContext mReactContext;
     private LocalBroadcastReceiver mLocalBroadcastReceiver;
+    
+    @ReactMethod
+    public void addListener(String eventName) {}
+    
+    @ReactMethod
+    public void removeListeners(double count) {}
 
     public ReactNativeNotificationHubModule(ReactApplicationContext reactContext) {
         super(reactContext);
